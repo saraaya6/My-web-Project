@@ -50,16 +50,17 @@ body {
   border-radius: 10px; /* حواف دائرية للصورة أيضاً */
 }
 
-.product-card .product-title {
+.product-card .product-name{
   font-size: 1.25rem; /* حجم خط أكبر للعنوان (20px) */
-  color: #333; /* لون أسود غير فاقع */
+  color: #272863; /* لون أسود غير فاقع */
   margin: 10px 0;
+  font-weight: bold;
 }
 
 .product-card .product-price {
   font-size: 1.1rem; /* (18px) */
   font-weight: bold;
-  color: #007bff; /* لون أزرق مميز للسعر */
+  color: #5b8ec4; /* لون أزرق مميز للسعر */
   margin-bottom: 20px;
 }
 
@@ -67,7 +68,7 @@ body {
 /* --- ... تصميم الزر (استبدل الكود القديم بهذا) ... --- */
 .product-card .add-to-cart-btn {
     /* الألوان الأساسية للزر (تدرج لوني مستوحى من ألوان آبل) */
-    background: linear-gradient(145deg, #007aff, #0062cc); /* تدرج من أزرق ساطع إلى أزرق أعمق */
+    background: linear-gradient(145deg, #ad9e9e, #0056d8); /* تدرج من أزرق ساطع إلى أزرق أعمق */
     color: white;             /* لون الخط أبيض */
     
     /* الشكل والأبعاد */
@@ -77,7 +78,7 @@ body {
     
     /* الخط والسلوك */
     font-size: 1rem;          /* (16px) */
-    font-weight: 600;         /* خط أعرض (bold) قليلاً ليكون أوضح */
+    font-weight: bold;         /* خط أعرض (bold) قليلاً ليكون أوضح */
     cursor: pointer;          /* تغيير شكل المؤشر عند التمرير */
     
     /* تأثيرات ناعمة */
@@ -88,7 +89,7 @@ body {
 /* --- ... تصميم الزر عند تمرير الماوس (hover) ... --- */
 .product-card .add-to-cart-btn:hover {
     /* عكس التدرج قليلاً ورفعه للأعلى */
-    background: linear-gradient(145deg, #0062cc, #007aff);
+    background: linear-gradient(145deg, #6fa0d8, #30a89e);
     transform: translateY(-2px); /* حركة بسيطة للأعلى */
     box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3); /* ظل أوضح عند الرفع */
 }
