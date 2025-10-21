@@ -1,0 +1,81 @@
+/* --- إعدادات أساسية للصفحة --- */
+body {
+  background-color: #f4f7f6; /* خلفية رمادية فاتحة جداً لراحة العين */
+  font-family: Arial, sans-serif; /* استخدام خط نظيف (يمكنك تغييره لاحقاً) */
+  margin: 0;
+  padding: 40px; /* مساحة حول الحاوية */
+}
+
+/* --- حاوية الكروت (للمسافات والتوسيط) --- */
+.product-container {
+  display: flex; /* أهم خاصية: لترتيب الكروت بجانب بعضها */
+  flex-wrap: wrap; /* للسماح للكروت بالنزول لسطر جديد في الشاشات الصغيرة */
+  justify-content: center; /* لتوسيط الكروت في منتصف الصفحة */
+  gap: 25px; /* المسافة الرائعة بين كل كرت وآخر */
+}
+
+/* --- تصميم كرت المنتج الاحترافي --- */
+.product-card {
+  /* (تم تصحيح الاسم من .prodoct-card) */
+  background-color: #ffffff; /* اللون الأبيض يعطي إحساس بالنظافة والاحترافية */
+  border-radius: 15px; /* حواف دائرية معتدلة */
+  
+  /* اللمسة الاحترافية: الظل 
+    يعطي عمق للكرت ويفصله عن الخلفية
+  */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  padding: 20px;
+  text-align: center;
+  width: 300px; /* تحديد عرض ثابت لضمان تناسق الكروت */
+  
+  /* تأثير ناعم عند تمرير الماوس 
+    (ينقل الكرت والظل ببطء)
+  */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- تأثير عند تمرير الماوس فوق الكرت --- */
+.product-card:hover {
+  transform: translateY(-5px); /* يرفع الكرت للأعلى قليلاً */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* ظل أوضح عند التمرير */
+}
+
+/* --- تنسيق العناصر داخل الكرت --- */
+
+.product-card img {
+  width: 100%; /* لجعل الصورة تأخذ عرض الكرت بالكامل (داخل الـ padding) */
+  height: auto; /* للحفاظ على أبعاد الصورة */
+  margin-bottom: 15px;
+  border-radius: 10px; /* حواف دائرية للصورة أيضاً */
+}
+
+.product-card .product-title {
+  font-size: 1.25rem; /* حجم خط أكبر للعنوان (20px) */
+  color: #333; /* لون أسود غير فاقع */
+  margin: 10px 0;
+}
+
+.product-card .product-price {
+  font-size: 1.1rem; /* (18px) */
+  font-weight: bold;
+  color: #007bff; /* لون أزرق مميز للسعر */
+  margin-bottom: 20px;
+}
+
+/* --- تصميم الزر (مهم جداً) --- */
+.product-card .add-to-cart-btn {
+  background-color: #007bff; /* لون أساسي للزر (أزرق) */
+  color: white; /* لون الخط أبيض */
+  border: none; /* إزالة الإطار الافتراضي */
+  border-radius: 8px; /* حواف دائرية للزر */
+  padding: 12px 24px; /* مساحة داخلية للزر ليبدو أكبر ومريح للضغط */
+  font-size: 1rem; /* (16px) */
+  font-weight: bold;
+  cursor: pointer; /* تغيير شكل المؤشر عند التمرير */
+  transition: background-color 0.3s ease; /* تأثير ناعم عند تغيير اللون */
+}
+
+.product-card .add-to-cart-btn:hover {
+  background-color: #0056b3; /* لون أغمق قليلاً عند تمرير الماوس */
+}
