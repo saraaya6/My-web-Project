@@ -1,6 +1,13 @@
+
+
 /* --- إعدادات أساسية للصفحة --- */
 body {
-  background-color: #f4f7f6; /* خلفية رمادية فاتحة جداً لراحة العين */
+  /* هذا يغير لون خلفية الصفحة كاملة للأسود */
+  background-color: #000000; 
+  
+  /* !! نقطة مهمة جداً !! */
+  /* لازم تغيري لون الخط الأساسي للأبيض، وإلا الكلام بيختفي */
+  color: #ffffff;
   font-family: Arial, sans-serif; /* استخدام خط نظيف (يمكنك تغييره لاحقاً) */
   margin: 0;
   padding: 40px; /* مساحة حول الحاوية */
@@ -85,11 +92,75 @@ body {
     transition: all 0.3s ease; /* تأثير شامل ناعم (للون والظل) */
     box-shadow: 0 4px 15px rgba(0, 122, 255, 0.2); /* ظل خفيف بلون الزر نفسه */
 }
+.btn-custom{
+  /* الألوان الأساسية للزر (تدرج لوني مستوحى من ألوان آبل) */
+    background: linear-gradient( 145deg, #171f3e, #294772); /* تدرج من أزرق ساطع إلى أزرق أعمق */
+    color: white;             /* لون الخط أبيض */
+    
+    /* الشكل والأبعاد */
+    border: none;             /* إزالة الإطار الافتراضي */
+    border-radius: 12px;      /* حواف دائرية أكثر نعومة (مثل زوايا الآيفون) */
+    padding: 12px 24px;       /* مساحة داخلية مريحة */
+    
+    /* الخط والسلوك */
+    font-size: 2rem;          /* (16px) */
+    font-weight: bold;         /* خط أعرض (bold) قليلاً ليكون أوضح */
+    cursor: pointer;          /* تغيير شكل المؤشر عند التمرير */
+    
+    /* تأثيرات ناعمة */
+    transition: all 0.3s ease; /* تأثير شامل ناعم (للون والظل) */
+    box-shadow: 0 4px 15px rgba(179, 188, 199, 0.2); /* ظل خفيف بلون الزر نفسه */
 
+}
+
+.btn-custom .add-to-cart-btn:hover{
+      /* عكس التدرج قليلاً ورفعه للأعلى */
+    background: linear-gradient(145deg, #6fa0d8, #30a89e);
+    transform: translateY(-2px); /* حركة بسيطة للأعلى */
+    box-shadow: 0 6px 20px rgba(104, 107, 111, 0.3); /* ظل أوضح عند الرفع */
+}
 /* --- ... تصميم الزر عند تمرير الماوس (hover) ... --- */
 .product-card .add-to-cart-btn:hover {
     /* عكس التدرج قليلاً ورفعه للأعلى */
     background: linear-gradient(145deg, #6fa0d8, #30a89e);
     transform: translateY(-2px); /* حركة بسيطة للأعلى */
-    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3); /* ظل أوضح عند الرفع */
+    box-shadow: 0 6px 20px rgba(191, 200, 211, 0.3); /* ظل أوضح عند الرفع */
+}
+
+
+/* ======== تنسيق الهيرو سيكشن ======== */
+.container-fluid-hero-section {
+  /* 1. تحديد الارتفاع (مثلاً 80% من طول الشاشة) */
+  min-height: 80vh; 
+
+  /* 2. إضافة الصورة كخلفية */
+  /* !!! ضروري: غيري المسار إلى مسار صورتك الصحيح !!! */
+  background-image: url('images/hero.jpg'); 
+  background-size: cover; /* يخلي الصورة تغطي المساحة كاملة */
+  background-position: center; /* يركز الصورة في النص */
+
+  /* 3. لتوسيط المحتوى (النصوص والزر) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 4. (اختياري) إضافة طبقة معتمة عشان الكلام يبان أوضح */
+  position: relative; 
+}
+
+/* هذا الكود يضيف طبقة سوداء شفافة فوق الصورة */
+.container-fluid-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* لون أسود شفاف 40% */
+}
+
+/* نخلي المحتوى فوق الطبقة الشفافة */
+.hero-content {
+  position: relative; /* هذا يضمن إن الكلام يكون فوق الطبقة المعتمة */
+  z-index: 2;
 }
