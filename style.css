@@ -93,6 +93,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 122, 255, 0.2); /* ظل خفيف بلون الزر نفسه */
 }
 .btn-custom{
+  text-decoration: none; /* 5. إزالة الخط تحت الرابط */
   /* الألوان الأساسية للزر (تدرج لوني مستوحى من ألوان آبل) */
     background: linear-gradient( 145deg, #171f3e, #294772); /* تدرج من أزرق ساطع إلى أزرق أعمق */
     color: white;             /* لون الخط أبيض */
@@ -180,4 +181,28 @@ footer.bg-dark {
 footer p {
     font-size: 0.9rem;
     color: #ccc; /* لون رمادي فاتح قليلاً للنص */
+}
+
+
+/* ======== تنسيق الشريط العلوي (Top Bar) الملون ======== */
+
+.simple-top-bar {
+  /* 1. استخدام التدرج اللوني المطلوب (المطابق لزر الهيرو) */
+  background: linear-gradient(145deg, #171f3e, #294772); /* */
+  padding: 8px 0; 
+  /* 2. إزالة الخط السفلي (لم نعد بحاجته مع الخلفية الداكنة) */
+}
+
+.top-bar-link {
+  /* 3. تغيير لون الخط إلى الأبيض ليكون واضحاً */
+  color: #ffffff; 
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+/* 4. تغيير لون تمرير الماوس إلى لون فاتح */
+.top-bar-link:hover {
+  color: #b0c4de; /* (درجة أزرق فاتح باهت) */
 }
