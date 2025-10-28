@@ -75,7 +75,7 @@ body {
 /* --- ... تصميم الزر (استبدل الكود القديم بهذا) ... --- */
 .product-card .add-to-cart-btn {
     /* الألوان الأساسية للزر (تدرج لوني مستوحى من ألوان آبل) */
-    background: linear-gradient(145deg, #ad9e9e, #0056d8); /* تدرج من أزرق ساطع إلى أزرق أعمق */
+    background: linear-gradient(145deg, #171f3e, #294772); /* تدرج من أزرق ساطع إلى أزرق أعمق */
     color: white;             /* لون الخط أبيض */
     
     /* الشكل والأبعاد */
@@ -116,14 +116,14 @@ body {
 
 .btn-custom .add-to-cart-btn:hover{
       /* عكس التدرج قليلاً ورفعه للأعلى */
-    background: linear-gradient(145deg, #6fa0d8, #30a89e);
+    background: linear-gradient(145deg, #4a6c93, #3b73c6);
     transform: translateY(-2px); /* حركة بسيطة للأعلى */
     box-shadow: 0 6px 20px rgba(104, 107, 111, 0.3); /* ظل أوضح عند الرفع */
 }
 /* --- ... تصميم الزر عند تمرير الماوس (hover) ... --- */
 .product-card .add-to-cart-btn:hover {
     /* عكس التدرج قليلاً ورفعه للأعلى */
-    background: linear-gradient(145deg, #6fa0d8, #30a89e);
+    background: linear-gradient(145deg, #4a6c93, #3b73c6);
     transform: translateY(-2px); /* حركة بسيطة للأعلى */
     box-shadow: 0 6px 20px rgba(191, 200, 211, 0.3); /* ظل أوضح عند الرفع */
 }
@@ -175,7 +175,7 @@ footer.bg-dark {
     
     
     /* إضافة خط علوي باللون الأزرق المميز من تصميمك */
-    border-top: 8px solid #6fa0d8; 
+    border-top: 8px solid #294772; 
 }
 
 footer p {
